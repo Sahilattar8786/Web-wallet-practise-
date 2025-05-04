@@ -18,10 +18,11 @@ export default function App() {
 
   return (
     <>
+     <input type="text" value={mnemonic} />
       <button onClick={handleCreateSeed} className="create-btn">
         Create Seed Phrase
       </button>
-
+   
       {/* Modal */}
       {showModal && (
         <div className="modal-overlay">
@@ -45,7 +46,7 @@ export default function App() {
       )}
 
       {/* Your Wallets */}
-      <SolanaWallet mnemonic ={mnemonic } />
+      <SolanaWallet mnemonic ={mnemonic} />
       <EthWallet mnemonic={mnemonic} />
     </>
   );
